@@ -1,0 +1,24 @@
+DEBUG:root:
+            Function: test
+            Execution-time: 0:00:00.000027
+            Address: --
+            Memory: --
+            Date: 2024-12-03 00:39:49.895503
+DEBUG:root:
+            Function: test
+            Execution-time: 0:00:00.000025
+            Address: --
+            Memory: 144
+            Date: 2024-12-03 00:41:09.456285
+DEBUG:root:
+            Function: test
+            Execution-time: 0:00:00.000049
+            Address: --
+            Memory: 144
+            Date: 2024-12-03 00:44:23.263141
+DEBUG:root:
+            Function: test2
+            Execution-time: 0:00:00.000005
+            Address: --
+            Memory: 144
+            Date: 2024-12-03 00:44:23.263995
