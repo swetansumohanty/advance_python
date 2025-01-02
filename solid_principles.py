@@ -28,7 +28,7 @@ class Order:
 # adding payment method
 
 
-class Paytm:
+class Payment:
     def debit_pay(self, order):
         print(f"processing payment for order id {order.order_id}")
         print("payment successfull")
@@ -37,5 +37,5 @@ class Paytm:
 item = [Item("phone", 2, 10000), Item("shirt", 2, 2000)]
 order_obj = Order(order_id=1, item=item)
 
-payment = Paytm()
+payment = Payment()
 payment.debit_pay(order_obj)
