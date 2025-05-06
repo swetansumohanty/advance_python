@@ -172,6 +172,7 @@ def get_month_start_end(target_month: str):
 def filter_active_items(item_list: list, target_month: str) -> List[dict]:
     """filter acitve items within the target month range and billing"""
 
+    logging.info("start filtering items")
     active_items = []
 
     # get year & month
@@ -202,6 +203,7 @@ def filter_active_items(item_list: list, target_month: str) -> List[dict]:
             item["amount"] = round(full_amount * factor, 2)
             active_items.append(item)
 
+    logging.info("items filtered successfully")
     return active_items
 
 
@@ -213,6 +215,7 @@ def group_items(items: List[Dict]) -> List[Dict]:
     - billing_start
     - billing_end
     """
+    logging.info("start gouping items")
     grouped = defaultdict(lambda: {"qty": 0, "amount": 0, "items": []})
 
     for item in items:
@@ -241,10 +244,12 @@ def group_items(items: List[Dict]) -> List[Dict]:
             }
         )
 
+    logging.info("item grouped successfully")
     return result
 
 
 def calculate_total_revenue(grouped_data: List[Dict]) -> float:
+    logging.info("calculated total revenue")
     return round(sum(group["total_amount"] for group in grouped_data), 2)
 
 
